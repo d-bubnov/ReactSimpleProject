@@ -1,5 +1,6 @@
-# ReduxSimpleStarter
+# ReactSimpleProject
 
+It a simple project for myself learning react framework. My name is Denis Bubnov and I am a programmer.
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
 ### Getting Started
