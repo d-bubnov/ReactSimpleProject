@@ -17,9 +17,7 @@ a {
     margin-bottom: 20px;
 }
 
-/*-----------------------------------------------------
-                     table about me
-*/
+/*----------------------------------------------------- table about me */
 .user-table {
     width: 500px;
     border: 2px solid #8CFFB2;
@@ -39,10 +37,8 @@ a {
     text-align: center !important;
     font-weight: bold;
 }
-/*-----------------------------------------------------*/
 
-/*-----------------------------------------------------
-                   button and time */
+/*----------------------------------------------------- button and time */
 .show-time-block {
     text-align: center;
     margin-top: 20px;
@@ -59,7 +55,7 @@ a {
     width: 220px;
     display: inline-block;
     text-align: center;
-    visibility: hidden; /*visible*/
+    visibility: hidden;
     font-weight: bold;
     background-color: #F7EDED;
 }
@@ -77,8 +73,7 @@ a {
     font-weight: bold;
     background-color: #FFC0BB;
 }
-/*-----------------------------------------------------
-                  search-list      */
+/*----------------------------------------------------- search-list */
 
 #search-list {
     margin-left:auto;
@@ -90,8 +85,7 @@ a {
     margin: auto;
 }
 
-/*-----------------------------------------------------
-                   hypnosis*/
+/*----------------------------------------------------- hypnosis */
 
 .button-hypnosis {
     width: 150px;
@@ -108,4 +102,3 @@ a {
     visibility: hidden;
     text-align: center;
 }
-/*-----------------------------------------------------*/
