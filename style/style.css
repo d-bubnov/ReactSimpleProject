@@ -1,0 +1,111 @@
+body {
+    background-color: #F0FFF5;
+    font-family: cursive;
+}
+
+a {
+    margin:5px;
+    margin-bottom: 20px;
+}
+
+.center-cursive-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#routing-block {
+    margin-bottom: 20px;
+}
+
+/*-----------------------------------------------------
+                     table about me
+*/
+.user-table {
+    width: 500px;
+    border: 2px solid #8CFFB2;
+    border-spacing: 7px 5px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.user-table > tr > td {
+    text-align: left;
+    padding: 5px;
+    width: 200px;
+    background: #CEFEDE;
+}
+.other-column-table {
+    text-align: center !important;
+    font-weight: bold;
+}
+/*-----------------------------------------------------*/
+
+/*-----------------------------------------------------
+                   button and time */
+.show-time-block {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#div-btn-time {
+    width: 160px;
+    text-align: center;
+    display: inline-block;
+}
+
+#div-current-time {
+    width: 220px;
+    display: inline-block;
+    text-align: center;
+    visibility: hidden; /*visible*/
+    font-weight: bold;
+    background-color: #F7EDED;
+}
+
+.button-show-time {
+    width: 150px;
+    color:#C91010;
+    font-weight: bold;
+    background-color: #0AFA58;
+}
+
+.button-hide-time {
+    width: 150px;
+    color:#888;
+    font-weight: bold;
+    background-color: #FFC0BB;
+}
+/*-----------------------------------------------------
+                  search-list      */
+
+#search-list {
+    margin-left:auto;
+    margin-right:auto;
+}
+.phone-list {
+    list-style: circle;
+    display: table;
+    margin: auto;
+}
+
+/*-----------------------------------------------------
+                   hypnosis*/
+
+.button-hypnosis {
+    width: 150px;
+    font-weight: bold;
+}
+
+#hypnotoad {
+    text-align: center;
+    visibility: hidden;
+    display: none;
+}
+
+#timer-hypnosis {
+    visibility: hidden;
+    text-align: center;
+}
+/*-----------------------------------------------------*/
