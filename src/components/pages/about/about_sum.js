@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ThinksAboutSum extends React.Component {
+class ThinkAboutSum extends React.Component {
     render() {
         return <div>
             <div>What do you think about it? (See next line)</div>
@@ -10,4 +10,4 @@ class ThinksAboutSum extends React.Component {
     }
 }
 
-export default ThinksAboutSum;
+export default ThinkAboutSum;

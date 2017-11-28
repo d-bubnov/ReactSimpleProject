@@ -1,12 +1,12 @@
 import React from 'react';
 
 import userInfo from '../../data/user_information';
-import ThinksAboutSum from './about_sum';
+import ThinkAboutSum from './about_sum';
 
 class AboutMeTable extends React.Component {
     render() {
         return <div>
-            <ThinksAboutSum />
+            <ThinkAboutSum />
             <table id={userInfo.id} className='user-table'>
                 <tbody>
                     <tr>
