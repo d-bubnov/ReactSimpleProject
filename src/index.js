@@ -7,7 +7,7 @@ import SearchDataList from './components/data/search_data_list';
 import ButtonComponent from './components/time/button_time';
 import HypnosisForm from './components/hypnosis/hypnosis_form';
 
-import AboutPage from './components/pages/about_site';
+import AboutPage from './components/pages/about/about_site';
 import NotFoundPage from './components/pages/not_found';
 import MainPage from './components/pages/main';
 import NavPage from './components/pages/nav';
