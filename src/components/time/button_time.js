@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// Button show/hide time! ---------------------------------------------------------------
-class ButtonComponent extends React.Component {
+class ButtonComponent extends Component {
     constructor(props){
         super(props);
         this.state = {class: 'button-show-time', label: 'Show time!'};
@@ -39,7 +38,7 @@ class ButtonComponent extends React.Component {
     }
 
     render() {
-        //console.log("render button show/hide time");
+        // console.log("render button show/hide time");
         return <div className="center-cursive-text">
             If you want, you can look at current time! Push the button «Show time!»
             <div className="show-time-block">

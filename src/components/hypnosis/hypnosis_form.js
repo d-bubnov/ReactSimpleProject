@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-// Hypnosis -------------------------------------------------------------------------------
 const styleInputValue = {
     width:'150px'
-}
+};
 
-class HypnosisForm extends React.Component {
+class HypnosisForm extends Component {
     constructor(props) {
         super(props);
         this.state = {number: ""};

@@ -1,4 +1,3 @@
-// Phones. Search in list. ---------------------------------------------------
 const SearchDataList = {
     title: "List models of phone",
     items: [

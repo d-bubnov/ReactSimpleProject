@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Item from './search_item';
 
-class ItemList extends React.Component {
+class ItemList extends Component {
     constructor(props){
         super(props);
         this.state = { items: this.props.data.items };
         this.filterList = this.filterList.bind(this);
     }
 
-    filterList(e){
+    filterList(event){
         let filteredList = this.props.data.items.filter(function(item){
-            return item.toLowerCase().search(e.target.value.toLowerCase()) !== -1;
+            return item.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
         });
 
         this.setState({ items: filteredList });

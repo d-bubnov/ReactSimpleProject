@@ -1,6 +1,3 @@
-import React from 'react';
-
-// about me -----------------------------------------------------------------
 const userInfo = {
     id : 'main-user',
     age : 26,

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import AboutMeTable from './about_me_table'
 
-class AboutPage extends React.Component{
+class AboutPage extends Component{
     render(){
         return <div className="center-cursive-text">
             <AboutMeTable />

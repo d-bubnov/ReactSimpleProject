@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import userInfo from '../../data/user_information';
 import ThinkAboutSum from './about_sum';
 
-class AboutMeTable extends React.Component {
+class AboutMeTable extends Component {
     render() {
         return <div>
             <ThinkAboutSum />

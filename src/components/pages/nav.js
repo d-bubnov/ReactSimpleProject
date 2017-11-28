@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class NavPage extends React.Component{
+class NavPage extends Component {
     render(){
         return <nav className="center-cursive-text">
             <Link to="/"> Main page </Link>
