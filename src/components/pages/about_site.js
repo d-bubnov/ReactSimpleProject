@@ -1,5 +1,5 @@
 import React from 'react';
-import userInfo from '../data/user_information'
+import userInfo from '../data/user_information';
 
 class AboutPage extends React.Component{
     render(){

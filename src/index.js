@@ -5,12 +5,12 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ItemList from './components/search/search_item_list';
 import SearchDataList from './components/data/search_data_list';
 import ButtonComponent from './components/time/button_time';
+import HypnosisForm from './components/hypnosis/hypnosis_form';
 
 import AboutPage from './components/pages/about_site';
 import NotFoundPage from './components/pages/not_found';
 import MainPage from './components/pages/main';
 import NavPage from './components/pages/nav';
-import HypnosisForm from './components/hypnosis/hypnosis_form';
 
 ReactDOM.render(
     <BrowserRouter>
