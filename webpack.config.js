@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -20,7 +22,12 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
-    historyApiFallback: true,
-    contentBase: './'
+      historyApiFallback: true,
+      contentBase: './',
+      watchOptions: {
+          ignored: "/node_modules/",
+          aggregateTimeout: 300,
+          poll: 1000
+      }
   }
 };

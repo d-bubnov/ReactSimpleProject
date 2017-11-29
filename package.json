@@ -6,10 +6,11 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
+    "watch": "webpack --watch",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "",
+  "author": "Denis Bubnov",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
