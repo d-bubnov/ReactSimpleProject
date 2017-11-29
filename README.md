@@ -1,6 +1,6 @@
 # ReactSimpleProject
 
-It a simple project for myself learning react framework. My name is Denis Bubnov and I am a programmer.
+It is a simple project for myself learning react framework. My name is Denis Bubnov and I am a programmer.
 
 ### Getting Started
 
