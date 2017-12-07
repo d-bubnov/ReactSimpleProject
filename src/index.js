@@ -7,6 +7,8 @@ import SearchDataList from './components/data/search_data_list';
 import ButtonComponent from './components/time/button_time';
 import HypnosisForm from './components/hypnosis/hypnosis_form';
 
+
+import VideoPage from './components/pages/video';
 import AboutPage from './components/pages/about/about_site';
 import NotFoundPage from './components/pages/not_found';
 import MainPage from './components/pages/main';
@@ -24,6 +26,7 @@ ReactDOM.render(
                 )} />
                 <Route path="/hypnosis" component={HypnosisForm} />
                 <Route path="/timepage" component={ButtonComponent} />
+                <Route path="/youtubevideo" component={VideoPage}/>
                 <Route component={NotFoundPage} />
             </Switch>
         </div>

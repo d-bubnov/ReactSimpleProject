@@ -9,6 +9,7 @@ class NavPage extends Component {
             <Link to="/phones"> Phones </Link>
             <Link to="/hypnosis"> Hypnosis </Link>
             <Link to="/timepage"> Time? </Link>
+            <Link to="/youtubevideo"> Video </Link>
         </nav>;
     }
 }
