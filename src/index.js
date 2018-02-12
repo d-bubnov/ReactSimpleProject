@@ -32,34 +32,25 @@ import MainPage from './components/pages/main';
 import NavPage from './components/pages/nav';
 
 
-import express from 'apollo-server-express';
-import { apolloServer } from 'graphql-tools';
-import Schema from './schemas/schema';
-import Mocks from './data/mocks';
-import Resolvers from './data/resolvers';
-
-
-const PORT = 8080;
-let graphQLServer = express();
-
-graphQLServer.use('/graphql', apolloServer({
-    graphiql: true,
-    pretty: true,
-    schema: Schema,
-    resolvers: Resolvers,
-    mocks: Mocks,
-}));
-graphQLServer.listen(PORT, () => console.log(
-    `GraphQL Server is now running on http://localhost:${PORT}/graphql`
-));
-
-
 const client = new ApolloClient({
     cache: new InMemoryCache(),
-    link: createHttpLink({ uri: 'http://localhost:8080/graphql' })
+    link: createHttpLink({ uri: 'http://localhost:3000/graphql' })
 });
 
-
+const PhysicalPersons = ({ data: { loading, error, physicalPersons }}) => {
+    if (loading) {
+        console.log('loading');
+        return <p>Loading...</p>
+    } else if (error) {
+        console.log('error: ' + error);
+        return <p>{error.message}</p>
+    } else {
+        console.log('object: ' + physicalPersons);
+        return <ul>
+            { physicalPersons.map( pp => <li key={pp.id}>{pp.lastName}</li> ) }
+        </ul>
+    }
+}
 
 const physicalPersonsQuery = gql`
     query PhysicalPersonsQuery {
@@ -71,23 +62,10 @@ const physicalPersonsQuery = gql`
     }
 `;
 
-const PhysicalPersons = ({ data: { loading, error, physicalPersons }}) => {
-    if (loading) {
-        console.log('loading');
-        return <p>Loading...</p>
-    } else if (error) {
-        console.log('error: ' + error);
-        return <p>{error.message}</p>
-    } else {
-        console.log('object: ' + physicalPersons);
-
-        return <ul>
-            { physicalPersons.map( pp => <li key={pp.id}> {pp.lastName} </li> ) }
-        </ul>
-    }
-}
-
 const PhysicalPersonsWithData = graphql(physicalPersonsQuery)(PhysicalPersons);
+
+
+
 
 ReactDOM.render(
     <ApolloProvider client={client}>
