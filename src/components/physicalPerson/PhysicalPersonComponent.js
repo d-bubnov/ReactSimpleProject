@@ -39,7 +39,7 @@ const PhysicalPersonComponent = graphql(
     physicalPersonQuery,
     {
         options: () => ({
-            variables: { physicalPersonId: '322845fc-0146-4e3b-80f9-3aafa5de584d' }
+            variables: { physicalPersonId: 'ab463b8b-a76c-4f6a-a726-75ab5730b69b' }
         })
     })(physicalPersonHandler);
 
