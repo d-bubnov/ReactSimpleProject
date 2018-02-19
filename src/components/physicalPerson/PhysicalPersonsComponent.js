@@ -6,6 +6,8 @@ import React from 'react';
 import { graphql } from 'react-apollo'
 import { gql } from 'apollo-client-preset';
 
+import DebtorRow from './DebtorRow';
+
 const physicalPersonsQuery = gql`
     query PhysicalPersonsQuery {
         physicalPersons {
@@ -18,16 +20,22 @@ const physicalPersonsQuery = gql`
 
 const PhysicalPersonsHandler = ({ data: { loading, error, physicalPersons }}) => {
     if (loading) {
-        return <p>Loading...</p>
+        return <tbody><tr><td colSpan="3">Loading...</td></tr></tbody>;
     } else if (error) {
         console.log('error: ' + error);
-        return <p>{error.message}</p>
+        return <tbody><tr><td colSpan="3">{error.message}</td></tr></tbody>;
     } else {
         console.log('physicalPersons: ' + JSON.stringify(physicalPersons));
-        return <ul>{ physicalPersons.map( pp => <li key={pp.id}>{pp.lastName} {pp.firstName}</li> ) }</ul>
+
+        return <tbody>
+        {
+            physicalPersons.map((person, index) =>
+            <DebtorRow person={person} key={person.id} index={index + 1}/>)
+        }
+        </tbody>;
     }
 };
 
-const PhysicalPersonsComponent = graphql(physicalPersonsQuery)(PhysicalPersonsHandler);
+const PhysicalPersonsTBody = graphql(physicalPersonsQuery)(PhysicalPersonsHandler);
 
-export default PhysicalPersonsComponent;
+export default PhysicalPersonsTBody;
