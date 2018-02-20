@@ -10,8 +10,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // import DOM components
 import DebtorsTable from './components/physicalPerson/DebtorsTable';
-import PhysicalPersonComponent from './components/physicalPerson/PhysicalPersonComponent';
-import DebtsComponent from './components/debt/DebtsComponent';
+import PhysicalPersonComponent from './components/physicalPerson/PhysicalPerson';
+import DebtsTable from './components/debt/DebtsTable';
 
 // initialize apollo client by apollo server
 const client = new ApolloClient({
@@ -23,18 +23,12 @@ const client = new ApolloClient({
 const element =
     <ApolloProvider client={client}>
         <div>
-            <div>
-                <h4>Physical persons:</h4>
-                <DebtorsTable/>
-            </div>
+            <DebtorsTable/>
             <div>
                 <h4>Main physical person:</h4>
                 <PhysicalPersonComponent/>
             </div>
-            <div>
-                <h4>List of debts:</h4>
-                <DebtsComponent/>
-            </div>
+            <DebtsTable/>
         </div>
     </ApolloProvider>;
 
@@ -43,3 +37,5 @@ const container = document.getElementById("root");
 
 // render page
 ReactDOM.render(element, container);
+
+console.log('loaded');

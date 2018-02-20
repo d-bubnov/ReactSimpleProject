@@ -22,20 +22,20 @@ const physicalPersonHandler = ({ data: { loading, error, physicalPerson }}) => {
     if (loading) {
         return <p>Loading person...</p>
     } else if (error) {
-        console.log('error: ' + error);
+        // console.log('error: ' + error);
         return <p>An error occurred while loading data...</p>
     } else {
         if (physicalPerson) {
-            console.log('physicalPerson: ' + JSON.stringify(physicalPerson));
+            // console.log('physicalPerson: ' + JSON.stringify(physicalPerson));
             return <p key={physicalPerson.id}>Name: {physicalPerson.firstName} {physicalPerson.lastName} {physicalPerson.patronymic}, phone: {physicalPerson.phoneNumber}</p>
         } else {
-            console.log('Physical person is not found.');
+            // console.log('Physical person is not found.');
             return <p>Physical person is not found.</p>
         }
     }
 };
 
-const PhysicalPersonComponent = graphql(
+const PhysicalPerson = graphql(
     physicalPersonQuery,
     {
         options: () => ({
@@ -43,4 +43,4 @@ const PhysicalPersonComponent = graphql(
         })
     })(physicalPersonHandler);
 
-export default PhysicalPersonComponent;
+export default PhysicalPerson;

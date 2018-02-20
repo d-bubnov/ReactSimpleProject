@@ -22,20 +22,14 @@ const PhysicalPersonsHandler = ({ data: { loading, error, physicalPersons }}) =>
     if (loading) {
         return <tbody><tr><td colSpan="3">Loading...</td></tr></tbody>;
     } else if (error) {
-        console.log('error: ' + error);
+        // console.log('error: ' + error);
         return <tbody><tr><td colSpan="3">{error.message}</td></tr></tbody>;
     } else {
-        console.log('physicalPersons: ' + JSON.stringify(physicalPersons));
-
-        return <tbody>
-        {
-            physicalPersons.map((person, index) =>
-            <DebtorRow person={person} key={person.id} index={index + 1}/>)
-        }
-        </tbody>;
+        // console.log('physicalPersons: ' + JSON.stringify(physicalPersons));
+        return <tbody>{ physicalPersons.map((person, index) => <DebtorRow person={person} key={person.id} index={index + 1}/>) }</tbody>;
     }
 };
 
-const PhysicalPersonsTBody = graphql(physicalPersonsQuery)(PhysicalPersonsHandler);
+const DebtorsTBody = graphql(physicalPersonsQuery)(PhysicalPersonsHandler);
 
-export default PhysicalPersonsTBody;
+export default DebtorsTBody;

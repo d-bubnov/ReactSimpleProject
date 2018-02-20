@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PhysicalPersonsTBody from './DebtorsTBody';
+import DebtsTBody from './DebtsTBody';
 import { Table }from 'react-bootstrap';
 
 class DebtorsTable extends Component
@@ -7,16 +7,15 @@ class DebtorsTable extends Component
     render() {
         return(
             <div>
-                <h4>Physical persons:</h4>
+                <h4>List of debts:</h4>
                 <Table className="table-persons" striped bordered condensed hover>
                     <thead>
                     <tr>
                         <th>Number</th>
-                        <th>First name</th>
-                        <th>Last name</th>
+                        <th>Description</th>
                     </tr>
                     </thead>
-                    <PhysicalPersonsTBody />
+                    <DebtsTBody />
                 </Table>
             </div>
         );

@@ -1,5 +1,6 @@
 body {
     background-color: #F0FFF5;
+    text-align: center;
     font-family: cursive;
 }
 
@@ -15,4 +16,9 @@ a {
 
 #routing-block {
     margin-bottom: 20px;
+}
+
+.table-persons {
+    width: 600px !important;
+    margin: auto;
 }
