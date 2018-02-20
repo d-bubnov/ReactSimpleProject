@@ -10,7 +10,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // import DOM components
 import DebtorsTable from './components/physicalPerson/DebtorsTable';
-import PhysicalPersonComponent from './components/physicalPerson/PhysicalPerson';
+import { PhysicalPerson } from './components/physicalPerson/PhysicalPerson';
 import DebtsTable from './components/debt/DebtsTable';
 
 // initialize apollo client by apollo server
@@ -26,7 +26,7 @@ const element =
             <DebtorsTable/>
             <div>
                 <h4>Main physical person:</h4>
-                <PhysicalPersonComponent/>
+                <PhysicalPerson/>
             </div>
             <DebtsTable/>
         </div>

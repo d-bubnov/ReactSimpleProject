@@ -2,9 +2,11 @@
  * Get one physical person
  * */
 
-import React from 'react';
+import React, { Component } from 'react';
 import { graphql } from 'react-apollo'
 import { gql } from 'apollo-client-preset';
+
+import Person from './Person';
 
 const physicalPersonQuery = gql`
     query PhysicalPersonQuery($physicalPersonId: ID!) {
@@ -27,7 +29,7 @@ const physicalPersonHandler = ({ data: { loading, error, physicalPerson }}) => {
     } else {
         if (physicalPerson) {
             // console.log('physicalPerson: ' + JSON.stringify(physicalPerson));
-            return <p key={physicalPerson.id}>Name: {physicalPerson.firstName} {physicalPerson.lastName} {physicalPerson.patronymic}, phone: {physicalPerson.phoneNumber}</p>
+            return <Person person={physicalPerson}/>
         } else {
             // console.log('Physical person is not found.');
             return <p>Physical person is not found.</p>
@@ -43,4 +45,4 @@ const PhysicalPerson = graphql(
         })
     })(physicalPersonHandler);
 
-export default PhysicalPerson;
+export { PhysicalPerson };
