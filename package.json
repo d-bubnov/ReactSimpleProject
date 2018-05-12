@@ -5,10 +5,10 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
-    "watch": "webpack --watch",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "author": "Denis Bubnov",
   "license": "ISC",
@@ -47,6 +47,7 @@
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
     "redux": "^3.0.4",
     "request-promise": "^4.2.2",
     "sequelize": "^4.33.1",
