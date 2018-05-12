@@ -1,8 +1,4 @@
-/**
- * Get list of physical persons
- * */
-
-import React from 'react';
+import React, { Component } from 'react';
 import { graphql } from 'react-apollo'
 import { gql } from 'apollo-client-preset';
 
@@ -18,18 +14,21 @@ const physicalPersonsQuery = gql`
     }
 `;
 
-const PhysicalPersonsHandler = ({ data: { loading, error, physicalPersons }}) => {
-    if (loading) {
-        return <tbody><tr><td colSpan="3">Loading...</td></tr></tbody>;
-    } else if (error) {
-        // console.log('error: ' + error);
-        return <tbody><tr><td colSpan="3">{error.message}</td></tr></tbody>;
-    } else {
-        // console.log('physicalPersons: ' + JSON.stringify(physicalPersons));
-        return <tbody>{ physicalPersons.map((person, index) => <DebtorRow person={person} key={person.id} index={index + 1}/>) }</tbody>;
+const graphQlQuery = graphql(physicalPersonsQuery);
+
+class DebtorsTBodyComponent extends Component {
+    render() {
+        const { data: { loading, error, physicalPersons }} = this.props;
+        if (loading) {
+            return <tbody><tr><td colSpan="3">Loading...</td></tr></tbody>;
+        } else if (error) {
+            return <tbody><tr><td colSpan="3">{error.message}</td></tr></tbody>;
+        } else {
+            return <tbody>{ physicalPersons.map((person, index) => <DebtorRow setSelectedPerson={this.props.setSelectedPerson} person={person} key={person.id} index={index + 1}/>) }</tbody>;
+        }
     }
-};
+}
 
-const DebtorsTBody = graphql(physicalPersonsQuery)(PhysicalPersonsHandler);
+const DebtorsTBody = graphQlQuery(DebtorsTBodyComponent);
 
-export default DebtorsTBody;
+export default  DebtorsTBody;

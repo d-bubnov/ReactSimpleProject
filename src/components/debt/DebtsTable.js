@@ -10,10 +10,10 @@ class DebtorsTable extends Component
                 <h4>List of debts:</h4>
                 <Table className="table-persons" striped bordered condensed hover>
                     <thead>
-                    <tr>
-                        <th>Number</th>
-                        <th>Description</th>
-                    </tr>
+                        <tr>
+                            <th>Number</th>
+                            <th>Description</th>
+                        </tr>
                     </thead>
                     <DebtsTBody />
                 </Table>
