@@ -1,4 +1,3 @@
-// import React components
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,7 +9,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 // import DOM components
 import DebtorsTable from './components/physicalPerson/DebtorsTable';
-import DebtsTable from './components/debt/DebtsTable';
+import DebtsTable from './components/table/DebtsTable';
 
 // initialize apollo client by apollo server
 const client = new ApolloClient({
