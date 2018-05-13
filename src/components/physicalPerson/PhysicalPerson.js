@@ -17,23 +17,19 @@ const physicalPersonQuery = gql`
 `;
 
 class PhysicalPerson extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    static physicalPersonHandler({ data: { loading, error, physicalPerson }}){
+    static physicalPersonHandler({ data: { loading, error, physicalPerson }}) {
         if (loading) {
-            return <p>Loading person...</p>
+            return <p>Loading person...</p>;
         } else if (error) {
             console.log('error', error);
-            return <p>An error occurred while loading data...</p>
+            return <p>An error occurred while loading data...</p>;
         } else {
             if (physicalPerson) {
                 // console.log('physicalPerson: ' + JSON.stringify(physicalPerson));
                 return <Person person={physicalPerson}/>
             } else {
                 // console.log('Physical person is not found.');
-                return <p>Physical person is not found.</p>
+                return <p>Physical person is not found.</p>;
             }
         }
     }

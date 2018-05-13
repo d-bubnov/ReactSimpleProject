@@ -16,7 +16,37 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    }],
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        },
+      },
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader"
+        },
+      },
+      {
+        test: /\.html$/,
+        use: {
+            loader: "html-loader"
+        },
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

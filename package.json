@@ -35,6 +35,7 @@
     "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.18.2",
     "casual": "^1.5.19",
+    "css-loader": "^0.28.11",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.7.3",
     "graphql-tools": "^2.20.2",
@@ -51,6 +52,10 @@
     "redux": "^3.0.4",
     "request-promise": "^4.2.2",
     "sequelize": "^4.33.1",
+    "subscriptions-transport-ws": "^0.9.7",
+    "style-loader": "^0.21.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "youtube-api-search": "0.0.5"
   }
 }

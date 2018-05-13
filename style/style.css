@@ -20,5 +20,7 @@ a {
 
 .table-persons {
     width: 600px !important;
-    margin: auto;
+    /*margin: auto;*/
+    margin-left: 50px;
+    margin-right: 50px;
 }

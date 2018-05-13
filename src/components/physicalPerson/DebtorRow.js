@@ -11,11 +11,13 @@ class DebtorRow extends Component {
     }
 
     render() {
-        return <tr id={this.state.person.id} onClick={this.props.setSelectedPerson}>
-            <td>{this.state.index}</td>
-            <td>{this.state.person.firstName}</td>
-            <td>{this.state.person.lastName}</td>
-        </tr>;
+        return (
+            <tr id={this.state.person.id} onClick={this.props.setSelectedPerson}>
+                <td>{this.state.index}</td>
+                <td>{this.state.person.firstName}</td>
+                <td>{this.state.person.lastName}</td>
+            </tr>
+        );
     };
 }
 
