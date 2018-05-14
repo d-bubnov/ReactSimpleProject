@@ -5,8 +5,7 @@ body {
 }
 
 a {
-    margin:5px;
-    margin-bottom: 20px;
+    margin: 5px 5px 20px;
 }
 
 .center-cursive-text {
@@ -20,7 +19,6 @@ a {
 
 .table-persons {
     width: 600px !important;
-    /*margin: auto;*/
     margin-left: 50px;
     margin-right: 50px;
 }

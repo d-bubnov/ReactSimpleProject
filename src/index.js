@@ -11,6 +11,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import DebtorsTable from './components/physicalPerson/DebtorsTable';
 import DebtsTable from './components/table/DebtsTable';
 
+// import styles
+import './style/style.css';
+
 // initialize apollo client by apollo server
 const client = new ApolloClient({
     cache: new InMemoryCache(),
@@ -31,5 +34,3 @@ const container = document.getElementById("root");
 
 // render page
 ReactDOM.render(element, container);
-
-console.log('loaded');

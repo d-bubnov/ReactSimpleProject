@@ -12,6 +12,19 @@ const debtsQuery = gql`
     }
 `;
 
+const debtQuery = gql`
+    query debtQuery($debtId: ID!) {
+        debt(id: $debtId) {
+            id
+            description
+            dateStart
+            dateEnd
+            dueDate
+            hasPartialRedemption
+        }
+    }
+`;
+
 class DebtorsTable extends Component
 {
     constructor(props) {
@@ -19,7 +32,10 @@ class DebtorsTable extends Component
 
         this.state = {
             debts: [],
+            debt: null
         };
+
+        this.getDetailsOfDebt = this.getDetailsOfDebt.bind(this);
     }
 
     componentDidMount() {
@@ -32,6 +48,9 @@ class DebtorsTable extends Component
                             debts: debts
                         });
                     }
+                })
+                .catch((e) => {
+                    console.log(e)
                 });
         } catch(error) {
             console.log(error);
@@ -39,8 +58,23 @@ class DebtorsTable extends Component
     }
 
     getDetailsOfDebt(event) {
-        let selectedItem = event.target.parentElement;
-        console.log(selectedItem);
+        let id = event.target.parentElement.id;
+        this.props.client
+            .query({
+                query: debtQuery,
+                variables: {
+                    debtId: id
+                }
+            })
+            .then(({ data: { debt } }) => {
+                console.log(debt);
+                this.setState({
+                    debt: debt
+                });
+            })
+            .catch((e) => {
+                console.log(e)
+            });
     }
 
     render() {

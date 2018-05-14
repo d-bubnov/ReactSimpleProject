@@ -20,8 +20,6 @@ class DebtorsTable extends Component
         this.setState({
             selectedPersonId: event.target.parentElement.id
         });
-
-        console.log(event.target.parentElement.id);
     }
 
     render() {
